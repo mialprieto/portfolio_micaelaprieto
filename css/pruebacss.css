@@ -6,10 +6,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
   body h1 {
-    color: #f0d3d3;
+    font-family: 'Dancing Script', cursive;
     font-size: 100px;
-    text-align: center;
-    font-family: 'Dancing Script', cursive; }
+    color: #f0d3d3;
+    text-align: center; }
   body h2 {
     color: #993196;
     font-size: 30px;
@@ -23,7 +23,10 @@ body {
     text-align: center;
     grid-area: main; }
   body a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #e6aee1; }
+  body :hover {
+    color: #290b3b; }
 
 p.nuestro {
   font-family: 'Oswald', sans-serif;
@@ -32,28 +35,14 @@ p.nuestro {
 header {
   grid-area: header; }
   header nav {
-    grid-area: nav;
-    text-align: center;
-    justify-items: stretch; }
-    header nav li {
-      font-style: normal;
-      font-family: 'Oswald', sans-serif;
-      font-size: 30px;
-      grid-area: nav;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      padding: 2em;
-      align-items: center;
-      flex-wrap: nowrap; }
+    grid-area: nav; }
     header nav ul {
       grid-area: nav;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      height: 50px;
-      align-items: center;
-      flex-wrap: nowrap; }
+      flex-direction: row; }
+      header nav ul li {
+        font-style: normal;
+        grid-area: nav;
+        flex-direction: row; }
 
 main {
   grid-area: main; }
