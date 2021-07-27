@@ -1,114 +1,103 @@
 $colorSubtitulo: rgb(153, 49, 150);
-@mixin text ($font-size, $font-family){
-    font-family: 'Dancing Script', cursive;
-    font-size: 100px;
+@mixin text ($TipoLetra, $FamiliaLetra){
+    font-family: $FamiliaLetra;
+    font-size: $TipoLetra;
 }
 
-.fondo {
-    background-color: rgba(0, 0, 0, 0.349);
-}
-
+/*generales*/
 body {
     background-image: url(../imagenes/foto9.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
-    h1{
-        @include text(-size, -family)
-        color: rgb(240, 211, 211);
-        text-align: center;
+    .fondo {
+        background-color: rgba(0, 0, 0, 0.349);
     }
 
-    h2 {
-        color: $colorSubtitulo;
-        font-size: 30px;
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-    }
-    p {
-        color: rgb(255, 255, 255);
-        font-size: 28px;
-        line-height: 1.2;
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-        grid-area: main;
-    }
-    
-    a {
-        text-decoration: none;
-        color:rgb(230, 174, 225)
-    }
-
-    :hover {
-        color:rgb(41, 11, 59)
-    }
-   
 }
 
-p.nuestro{
-    font-family: 'Oswald', sans-serif;
-    margin-top: 30px;
+h1{
+    @include text(100px, 'dancing script');
+    color: rgb(240, 211, 211);
+    text-align: center;
+}
+
+h2 {
+    color: $colorSubtitulo;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    line-height: 1.2;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
     
 }
 
-header {
-    grid-area: header; 
+main {
+     
+    .EspacioDelMenu{
+        margin-top: 30px;
+    }
+}
 
 nav {
-
-    grid-area: nav;
-    
-    ul {
-
-        grid-area: nav;
+    ul {    
         flex-direction: row;
     
         li {
             font-style: normal;
-            grid-area: nav;
+            
             flex-direction: row;
         }
     }
 }
 
+/*estilos index*/
+p.nuestro{
+    font-family: 'Oswald', sans-serif;
+    margin-top: 30px;  
+}
+.carousel-inner{
+    text-align: center;
+    justify-content: center;
+}
+    
+/*estilos contacto*/
+form {
+    text-align: center;
+    font-style: normal;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-main {
-    grid-area: main;
-
-    .EspacioDelMenu{
-        margin-top: 30px;
-    }
-   
-    form {
-        text-align: center;
-        font-style: normal;
-        font-size: 20px;
-        font-family: 'Roboto', sans-serif;
-        color: rgb(255, 255, 255);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        grid-area: main;
-        
-    }
-
-    .galeria{
-        margin-top: 10px;
-    }
-    .fotosgaleria{
-        text-align: center;
-    }
-    .carousel-inner{
-        text-align: center;
-        justify-content: center;
-    }
-
+/*estilos galeria*/
+.galeria{
+    margin-top: 10px;
+}
+.fotosgaleria{
+    text-align: center;
 }
 
+/*estilos servicios*/
+#FotosCardServicios{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/*estilos footer*/
 footer {
     font-size: 20px;
-    grid-area: pie;
+     
     margin-top: 8px;
     text-align: center;
     background-image: linear-gradient(to left, rgba(70, 30, 95, 0.466), rgba(245, 60, 205, 0.466));
@@ -118,26 +107,15 @@ footer {
         line-height: 1.2;
         font-family: 'Roboto', sans-serif;
         text-align: center;
-        grid-area: pie;
         margin-top: 8px;
     }  
-}
-
-
-#grid {
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 200px 100px 600px 100px;
-    grid-template-areas:"header  header     header"
-                        "nav     nav        nav"
-                        "main    main       main"
-                        "pie     pie        pie";
-}
-
-/* aplique media queries */
-@media only screen and (max-width: 600px) {
-    .fotos {
-        grid-template-columns: 100%;
-        grid-template-rows: 200px 200px 200px;
+    a {
+        text-decoration: none;
+        color:rgb(230, 174, 225);
+        
+    }
+    :hover {
+        color:rgb(41, 11, 59);
+        
     }
 }

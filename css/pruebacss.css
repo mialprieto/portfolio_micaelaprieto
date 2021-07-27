@@ -1,74 +1,75 @@
-.fondo {
-  background-color: rgba(0, 0, 0, 0.349); }
-
+/*generales*/
 body {
   background-image: url(../imagenes/foto9.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
-  body h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 100px;
-    color: #f0d3d3;
-    text-align: center; }
-  body h2 {
-    color: #993196;
-    font-size: 30px;
-    font-family: 'Roboto', sans-serif;
-    text-align: center; }
-  body p {
-    color: white;
-    font-size: 28px;
-    line-height: 1.2;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    grid-area: main; }
-  body a {
-    text-decoration: none;
-    color: #e6aee1; }
-  body :hover {
-    color: #290b3b; }
+  body .fondo {
+    background-color: rgba(0, 0, 0, 0.349); }
 
+h1 {
+  font-family: "dancing script";
+  font-size: 100px;
+  color: #f0d3d3;
+  text-align: center; }
+
+h2 {
+  color: #993196;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center; }
+
+p {
+  color: white;
+  font-size: 28px;
+  line-height: 1.2;
+  font-family: 'Roboto', sans-serif;
+  text-align: center; }
+
+main .EspacioDelMenu {
+  margin-top: 30px; }
+
+nav ul {
+  flex-direction: row; }
+  nav ul li {
+    font-style: normal;
+    flex-direction: row; }
+
+/*estilos index*/
 p.nuestro {
   font-family: 'Oswald', sans-serif;
   margin-top: 30px; }
 
-header {
-  grid-area: header; }
-  header nav {
-    grid-area: nav; }
-    header nav ul {
-      grid-area: nav;
-      flex-direction: row; }
-      header nav ul li {
-        font-style: normal;
-        grid-area: nav;
-        flex-direction: row; }
+.carousel-inner {
+  text-align: center;
+  justify-content: center; }
 
-main {
-  grid-area: main; }
-  main .EspacioDelMenu {
-    margin-top: 30px; }
-  main form {
-    text-align: center;
-    font-style: normal;
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-area: main; }
-  main .galeria {
-    margin-top: 10px; }
-  main .fotosgaleria {
-    text-align: center; }
-  main .carousel-inner {
-    text-align: center;
-    justify-content: center; }
+/*estilos contacto*/
+form {
+  text-align: center;
+  font-style: normal;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
+/*estilos galeria*/
+.galeria {
+  margin-top: 10px; }
+
+.fotosgaleria {
+  text-align: center; }
+
+/*estilos servicios*/
+#FotosCardServicios {
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+/*estilos footer*/
 footer {
   font-size: 20px;
-  grid-area: pie;
   margin-top: 8px;
   text-align: center;
   background-image: linear-gradient(to left, rgba(70, 30, 95, 0.466), rgba(245, 60, 205, 0.466)); }
@@ -78,17 +79,9 @@ footer {
     line-height: 1.2;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    grid-area: pie;
     margin-top: 8px; }
-
-#grid {
-  display: grid;
-  grid-template-columns: 25% 50% 25%;
-  grid-template-rows: 200px 100px 600px 100px;
-  grid-template-areas: "header  header     header" "nav     nav        nav" "main    main       main" "pie     pie        pie"; }
-
-/* aplique media queries */
-@media only screen and (max-width: 600px) {
-  .fotos {
-    grid-template-columns: 100%;
-    grid-template-rows: 200px 200px 200px; } }
+  footer a {
+    text-decoration: none;
+    color: #e6aee1; }
+  footer :hover {
+    color: #290b3b; }
